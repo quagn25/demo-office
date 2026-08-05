@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>CoSpace - Coworking Space Website Template</title>
+    <link rel="icon" href="images/icon.png" type="image/gif" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="CoSpace - Coworking Space Website Template" name="description" />
+    <meta content="" name="keywords" />
+    <meta content="" name="author" />
+    <!-- CSS Files
+    ================================================== -->
+    <link id="bootstrap" href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link id="bootstrap-grid" href="css/bootstrap-grid.min.css" rel="stylesheet" type="text/css" />
+    <link id="bootstrap-reboot" href="css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.theme.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl.transitions.css" rel="stylesheet" type="text/css" />
+    <link href="css/magnific-popup.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.countdown.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- color scheme -->
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" />
+    <link href="css/coloring.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        /* 1. Màu các gói đăng ký thành màu xanh lá */
+        .select-package-green {
+            color: #198754 !important;
+            border: 2px solid #198754 !important;
+            background-color: #f8fff9 !important;
+            font-weight: 700 !important;
+        }
+
+        .select-package-green:focus {
+            box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25) !important;
+            border-color: #157347 !important;
+        }
+
+        .select-package-green option {
+            color: #198754;
+            font-weight: 600;
+            background-color: #ffffff;
+        }
+
+        /* 2. Phần upload cho ô vuông to một ít */
+        .upload-square-box {
+            border: 2px dashed #198754;
+            border-radius: 12px;
+            background-color: #f8f9fa;
+            cursor: pointer;
+            padding: 18px 10px;
+            text-align: center;
+            min-height: 125px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.25s ease-in-out;
+        }
+
+        .upload-square-box:hover {
+            background-color: #eafeef;
+            border-color: #0f5132;
+            transform: translateY(-2px);
+        }
+
+        .upload-square-box i {
+            font-size: 2rem;
+            color: #198754;
+            margin-bottom: 6px;
+        }
+
+        .upload-square-box .upload-title {
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #212529;
+        }
+
+        .upload-square-box .upload-sub {
+            font-size: 0.75rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="preloader">
+            <div class="preloader1"></div>
+        </div>
+        <!-- header begin -->
+        <header class="transparent scroll-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex sm-pt10">
+                            <div class="de-flex-col">
+                                <div class="de-flex-col">
+                                    <!-- logo begin -->
+                                    <div id="logo">
+                                        <a href="index.html">
+                                            <img alt="" class="logo" src="images/logo-light.png" />
+                                            <img alt="" class="logo-2" src="images/logo.png" />
+                                        </a>
+                                    </div>
+                                    <!-- logo close -->
+                                </div>
+                                <div class="de-flex-col">
+                                </div>
+                            </div>
+                            <div class="de-flex-col header-col-mid">
+                                <!-- mainmenu begin -->
+                                <ul id="mainmenu">
+                                    <li>
+                                        <a href="index.html">Home<span></span></a>
+                                        <ul>
+                                            <li><a href="index.html">Homepage 1</a></li>
+                                            <li><a href="index-2.html">Homepage 2</a></li>
+                                            <li><a href="index-3.html">Homepage 3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="locations.html">Locations<span></span></a>
+                                        <ul>
+                                            <li><a href="locations.html">All Locations</a></li>
+                                            <li><a href="search-result.html">Search Location</a></li>
+                                            <li><a href="location-details.html">Location Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Company<span></span></a>
+                                        <ul>
+                                            <li><a href="about-us.html">About Us</a></li>
+                                            <li><a href="news.html">News</a></li>
+                                            <li><a href="jobs.html">Jobs</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="events.html">Events<span></span></a>
+                                        <ul>
+                                            <li><a href="events.html">Events</a></li>
+                                            <li><a href="event-single.html">Event Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Elements<span></span></a>
+                                        <ul>
+                                            <li><a href="icons-elegant.html">Elegant Icons</a></li>
+                                            <li><a href="icons-etline.html">Etline Icons</a></li>
+                                            <li><a href="icons-font-awesome.html">Font Awesome Icons</a></li>
+                                            <li><a href="accordion.html">Accordion</a></li>
+                                            <li><a href="alerts.html">Alerts</a></li>
+                                            <li><a href="counters.html">Counters</a></li>
+                                            <li><a href="modal.html">Modal</a></li>
+                                            <li><a href="popover.html">Popover</a></li>
+                                            <li><a href="pricing-table.html">Pricing Table</a></li>
+                                            <li><a href="progress-bar.html">Progress Bar</a></li>
+                                            <li><a href="tabs.html">Tabs</a></li>
+                                            <li><a href="tooltips.html">Tooltips</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="de-flex-col">
+                                <div class="menu_side_area">
+                                    <a href="login.html" class="btn-main"><i class="fa fa-sign-in"></i><span>Log
+                                            In</span></a>
+                                    <span id="menu-btn"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+
+            <section class="full-height relative no-top no-bottom vertical-center"
+                data-bgimage="url(images/background/subheader.jpg) top" data-stellar-background-ratio=".5">
+                <div class="overlay-gradient t50">
+                    <div class="center-y relative">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <!-- Left Column: Hero Intro text giống trang đăng nhập -->
+                                <div class="col-lg-6 text-light wow fadeInRight" data-wow-delay=".5s">
+                                    <div class="spacer-10"></div>
+                                    <h1>Hệ Thống Quản Lý Văn Phòng Ảo VioOffice</h1>
+                                    <p class="lead">Đăng ký tài khoản thành viên để sở hữu địa chỉ đăng ký kinh doanh
+                                        hợp pháp
+                                        ngay tại các tòa nhà cao ốc hạng A ở TP.HCM và Hà Nội trong 5 phút.</p>
+                                    <ul class="list-unstyled mt-4">
+                                        <li class="mb-2"><i class="fa fa-check text-success me-2"></i> Địa chỉ hợp pháp
+                                            100%,
+                                            đáp ứng điều kiện cấp GPKD & xuất hóa đơn</li>
+                                        <li class="mb-2"><i class="fa fa-check text-success me-2"></i> Lễ tân chuyên
+                                            nghiệp tiếp
+                                            đón khách, thông báo bưu phẩm qua Zalo/Email</li>
+                                        <li class="mb-2"><i class="fa fa-check text-success me-2"></i> Miễn phí giờ sử
+                                            dụng
+                                            phòng họp hiện đại LED 4K & sảnh tiếp khách</li>
+                                        <li class="mb-2"><i class="fa fa-check text-success me-2"></i> Đăng ký trực
+                                            tuyến siêu
+                                            tốc - Chuyên viên bàn giao hồ sơ ngay lập tức</li>
+                                    </ul>
+                                </div>
+
+                                <!-- Right Column: Box Đăng Ký Tài Khoản giống Box Đăng Nhập -->
+                                <div class="col-lg-5 offset-lg-1 wow fadeIn" data-wow-delay=".5s">
+                                    <div class="box-rounded padding40" data-bgcolor="#ffffff"
+                                        style="max-height: 85vh; overflow-y: auto;">
+                                        <h3 class="mb10">Đăng Ký Tài Khoản</h3>
+                                        <p>Đã có tài khoản thành viên? Đăng nhập <a href="login.html">tại
+                                                đây<span></span></a>.</p>
+
+                                        <!-- Thông báo Alert -->
+                                        <div id="register-alert" class="alert alert-success d-none small mb-3"
+                                            role="alert">
+                                        </div>
+                                        <div id="register-error" class="alert alert-danger d-none small mb-3"
+                                            role="alert">
+                                        </div>
+
+                                        <!-- Form với Bootstrap Was-Validated + HTML5 Validation -->
+                                        <form name="registerForm" id="vio_register_form"
+                                            class="form-border needs-validation" method="post"
+                                            enctype="multipart/form-data" novalidate>
+                                            @csrf
+
+                                            <!-- 1. Chọn Gói (Màu xanh lá theo yêu cầu) -->
+                                            <div class="field-set mb-3">
+                                                <select name="package" id="package"
+                                                    class="form-control select-package-green" required>
+                                                    <option value="Gói Tiêu Chuẩn (699.000đ/tháng)" selected>Gói Tiêu
+                                                        Chuẩn -
+                                                        699.000đ/tháng (Phổ biến nhất)</option>
+                                                    <option value="Gói Tiết Kiệm (399.000đ/tháng)">Gói Tiết Kiệm -
+                                                        399.000đ/tháng</option>
+                                                    <option value="Gói VIP / Pro (1.199.000đ/tháng)">Gói VIP / Pro -
+                                                        1.199.000đ/tháng</option>
+                                                    <option value="Gói Gói Theo Ngày (Theo ngày)">Gói Gói Theo Ngày -
+                                                        199.000đ/ngày</option>
+                                                </select>
+                                                <div class="invalid-feedback">Vui lòng chọn gói dịch vụ.</div>
+                                            </div>
+
+                                            <!-- 2. Tên doanh nghiệp -->
+                                            <div class="field-set mb-3">
+                                                <input type="text" name="company_name" id="company_name"
+                                                    class="form-control" placeholder="Tên doanh nghiệp / Công ty *"
+                                                    required minlength="3" maxlength="150"
+                                                    title="Tên doanh nghiệp/cá nhân phải từ 3 đến 150 ký tự">
+                                                <div class="invalid-feedback">Vui lòng nhập tên doanh nghiệp / công ty
+                                                    (ít nhất
+                                                    3 ký tự).</div>
+                                            </div>
+
+                                            <!-- 3. Điện thoại & Email -->
+                                            <div class="row g-2 mb-3">
+                                                <div class="col-6">
+                                                    <input type="tel" name="phone" id="phone" class="form-control"
+                                                        placeholder="Số điện thoại *" required
+                                                        pattern="^(0|84)(2(0[3-9]|1[0-8]|2[0-25-9]|3[2-9]|4[0-9]|5[124-9]|6[0-35-9]|7[0-7]|8[0-9]|9[0-4678]|3[0-9]|4[0123456789]|5[12456789]|6[0123456789]|7[0123456789]|8[0123456789]|9[0123456789])|3[2-9]|5[5689]|7[06-9]|8[1-689]|9[0-46-9])[0-9]{7}$"
+                                                        title="Vui lòng nhập số điện thoại Việt Nam hợp lệ (10 chữ số)">
+                                                    <div class="invalid-feedback">Số điện thoại 10 chữ số hợp lệ (bắt
+                                                        đầu 0 hoặc
+                                                        84).</div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <input type="email" name="email" id="email" class="form-control"
+                                                        placeholder="Email *" required
+                                                        pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
+                                                        autocomplete="username" title="Vui lòng nhập email hợp lệ">
+                                                    <div class="invalid-feedback">Vui lòng nhập đúng định dạng email.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- 4. Mật khẩu & Xác nhận mật khẩu -->
+                                            <div class="row g-2 mb-3">
+                                                <div class="col-6">
+                                                    <input type="password" name="password" id="password"
+                                                        class="form-control" placeholder="Mật khẩu *" required
+                                                        minlength="8" autocomplete="new-password"
+                                                        title="Mật khẩu từ 8 ký tự trở lên">
+                                                    <div class="invalid-feedback">Mật khẩu phải từ 8 ký tự.</div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <input type="password" name="password_confirmation"
+                                                        id="password_confirmation" class="form-control"
+                                                        placeholder="Xác nhận mật khẩu *" required minlength="8"
+                                                        autocomplete="new-password"
+                                                        title="Vui lòng nhập lại mật khẩu khớp">
+                                                    <div class="invalid-feedback" id="pwd_confirm_feedback">Xác nhận mật
+                                                        khẩu
+                                                        không khớp.</div>
+                                                </div>
+                                            </div>
+
+                                            <!-- 5. Phần upload cho ô vuông to một ít (Drag & Drop) -->
+                                            <div class="row g-2 mb-3">
+                                                <div class="col-6">
+                                                    <div class="upload-square-box" id="box_gpkd">
+                                                        <i class="fa fa-file-pdf-o"></i>
+                                                        <div class="upload-title">Upload GPKD / Thuế</div>
+                                                        <div class="upload-sub">Kéo thả hoặc bấm (.pdf, .jpg)</div>
+                                                        <span id="label_gpkd"
+                                                            class="badge bg-success mt-2 d-none text-truncate"
+                                                            style="max-width: 90%;"></span>
+                                                        <input type="file" name="gpkd_file" id="gpkd_file"
+                                                            class="d-none" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="upload-square-box" id="box_cccd"
+                                                        style="border-color: #0d6efd !important;">
+                                                        <i class="fa fa-id-card-o" style="color: #0d6efd;"></i>
+                                                        <div class="upload-title">Upload CCCD / Hộ chiếu</div>
+                                                        <div class="upload-sub">Kéo thả hoặc bấm (.pdf, .jpg)</div>
+                                                        <span id="label_cccd"
+                                                            class="badge bg-primary mt-2 d-none text-truncate"
+                                                            style="max-width: 90%;"></span>
+                                                        <input type="file" name="cccd_file" id="cccd_file"
+                                                            class="d-none" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Điều khoản -->
+                                            <div class="mb-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="terms"
+                                                        id="terms" required checked>
+                                                    <label class="form-check-label small text-muted" for="terms">
+                                                        Đồng ý với <a href="#"
+                                                            class="text-primary text-decoration-underline">Điều khoản
+                                                            dịch
+                                                            vụ</a> và <a href="#"
+                                                            class="text-primary text-decoration-underline">Chính sách
+                                                            bảo
+                                                            mật</a>.
+                                                    </label>
+                                                    <div class="invalid-feedback">Bạn cần đồng ý với điều khoản dịch vụ.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="field-set">
+                                                <button type="submit" id="btn_submit_register"
+                                                    class="btn btn-main btn-fullwidth color-2">
+                                                    <span id="btn_text">Đăng Ký Tài Khoản</span>
+                                                    <span id="btn_loading" class="d-none"><i
+                                                            class="fa fa-spinner fa-spin me-2"></i>Đang xử lý...</span>
+                                                </button>
+                                            </div>
+
+                                            <div class="clearfix"></div>
+
+                                            <div class="spacer-single"></div>
+
+                                            <!-- social icons -->
+                                            <ul class="list s3">
+                                                <li>Đăng ký nhanh qua:</li>
+                                                <li><a href="#"
+                                                        onclick="event.preventDefault(); alert('Đăng ký qua Facebook');">Facebook</a>
+                                                </li>
+                                                <li><a href="#"
+                                                        onclick="event.preventDefault(); alert('Đăng ký qua Google');">Google</a>
+                                                </li>
+                                            </ul>
+                                            <!-- social icons close -->
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!-- content close -->
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // 1. Kéo thả & Nhấn để chọn file cho ô vuông GPKD
+                const boxGpkd = document.getElementById('box_gpkd');
+                const inputGpkd = document.getElementById('gpkd_file');
+                const labelGpkd = document.getElementById('label_gpkd');
+                if (boxGpkd && inputGpkd) {
+                    boxGpkd.addEventListener('click', () => inputGpkd.click());
+                    boxGpkd.addEventListener('dragover', (e) => { e.preventDefault(); boxGpkd.style.backgroundColor = '#eafeef'; });
+                    boxGpkd.addEventListener('dragleave', (e) => { e.preventDefault(); boxGpkd.style.backgroundColor = '#f8f9fa'; });
+                    boxGpkd.addEventListener('drop', (e) => {
+                        e.preventDefault();
+                        boxGpkd.style.backgroundColor = '#f8f9fa';
+                        if (e.dataTransfer.files.length) {
+                            inputGpkd.files = e.dataTransfer.files;
+                            showBadge(labelGpkd, e.dataTransfer.files[0].name);
+                        }
+                    });
+                    inputGpkd.addEventListener('change', () => {
+                        if (inputGpkd.files.length) showBadge(labelGpkd, inputGpkd.files[0].name);
+                    });
+                }
+
+                // 2. Kéo thả & Nhấn để chọn file cho ô vuông CCCD
+                const boxCccd = document.getElementById('box_cccd');
+                const inputCccd = document.getElementById('cccd_file');
+                const labelCccd = document.getElementById('label_cccd');
+                if (boxCccd && inputCccd) {
+                    boxCccd.addEventListener('click', () => inputCccd.click());
+                    boxCccd.addEventListener('dragover', (e) => { e.preventDefault(); boxCccd.style.backgroundColor = '#e8f4ff'; });
+                    boxCccd.addEventListener('dragleave', (e) => { e.preventDefault(); boxCccd.style.backgroundColor = '#f8f9fa'; });
+                    boxCccd.addEventListener('drop', (e) => {
+                        e.preventDefault();
+                        boxCccd.style.backgroundColor = '#f8f9fa';
+                        if (e.dataTransfer.files.length) {
+                            inputCccd.files = e.dataTransfer.files;
+                            showBadge(labelCccd, e.dataTransfer.files[0].name);
+                        }
+                    });
+                    inputCccd.addEventListener('change', () => {
+                        if (inputCccd.files.length) showBadge(labelCccd, inputCccd.files[0].name);
+                    });
+                }
+
+                function showBadge(el, name) {
+                    if (!el) return;
+                    el.textContent = '✓ ' + name;
+                    el.classList.remove('d-none');
+                }
+
+                // 3. Kiểm tra Validate Mật khẩu xác nhận & Xử lý gửi Form AJAX
+                const form = document.getElementById('vio_register_form');
+                const alertSuccess = document.getElementById('register-alert');
+                const alertError = document.getElementById('register-error');
+                const btnSubmitRegister = document.getElementById('btn_submit_register');
+                const btnText = document.getElementById('btn_text');
+                const btnLoading = document.getElementById('btn_loading');
+                const pwdInput = document.getElementById('password');
+                const pwdConfirmInput = document.getElementById('password_confirmation');
+                const pwdConfirmFeedback = document.getElementById('pwd_confirm_feedback');
+
+                if (form) {
+                    // Kiểm tra khớp mật khẩu ngay khi gõ
+                    function validatePasswordMatch() {
+                        if (pwdInput && pwdConfirmInput) {
+                            if (pwdConfirmInput.value !== pwdInput.value) {
+                                pwdConfirmInput.setCustomValidity('Xác nhận mật khẩu không khớp!');
+                                if (pwdConfirmFeedback) pwdConfirmFeedback.textContent = 'Xác nhận mật khẩu không khớp với mật khẩu.';
+                            } else {
+                                pwdConfirmInput.setCustomValidity('');
+                                if (pwdConfirmFeedback) pwdConfirmFeedback.textContent = 'Vui lòng xác nhận lại mật khẩu.';
+                            }
+                        }
+                    }
+                    if (pwdInput) pwdInput.addEventListener('input', validatePasswordMatch);
+                    if (pwdConfirmInput) pwdConfirmInput.addEventListener('input', validatePasswordMatch);
+
+                    form.addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        validatePasswordMatch();
+
+                        // Kiểm tra validation (HTML5 Validation & Bootstrap Was-Validated)
+                        if (!form.checkValidity()) {
+                            e.stopPropagation();
+                            form.classList.add('was-validated');
+                            return;
+                        }
+
+                        alertSuccess.classList.add('d-none');
+                        alertError.classList.add('d-none');
+                        btnSubmitRegister.disabled = true;
+                        btnText.classList.add('d-none');
+                        btnLoading.classList.remove('d-none');
+
+                        const formData = new FormData(form);
+
+                        fetch("register.html", {
+                            method: 'POST',
+                            headers: {
+                                'X-Requested-With': 'XMLHttpRequest',
+                                'X-CSRF-TOKEN': "",
+                                'Accept': 'application/json'
+                            },
+                            body: formData
+                        })
+                            .then(async response => {
+                                const contentType = response.headers.get("content-type");
+                                if (!contentType || !contentType.includes("application/json")) {
+                                    if (response.status === 419) {
+                                        throw { message: 'Phiên làm việc đã hết hạn (419). Vui lòng nhấn F5 tải lại trang để làm mới token CSRF.' };
+                                    }
+                                    if (response.status === 500) {
+                                        throw { message: 'Lỗi máy chủ (500): Vui lòng kiểm tra cấu hình Database.' };
+                                    }
+                                    throw { message: 'Lỗi phản hồi máy chủ (' + response.status + '): Máy chủ trả về dữ liệu không đúng định dạng JSON.' };
+                                }
+                                const data = await response.json();
+                                if (!response.ok) {
+                                    throw data;
+                                }
+                                return data;
+                            })
+                            .then(data => {
+                                btnSubmitRegister.disabled = false;
+                                btnText.classList.remove('d-none');
+                                btnLoading.classList.add('d-none');
+
+                                if (data.success) {
+                                    console.log("Đăng ký thành công", data);
+
+                                    let msg = '<strong>' + data.message + '</strong><br>';
+                                    msg += 'Tài khoản: ' + data.data.name + ' (' + data.data.email + ')<br>';
+                                    msg += 'Doanh nghiệp: ' + data.data.company_name + ' | Gói: ' + data.data.package;
+                                    if (data.data.uploaded_files && data.data.uploaded_files.length > 0) {
+                                        msg += '<br><strong>Tài liệu đính kèm:</strong> ';
+                                        data.data.uploaded_files.forEach(f => {
+                                            msg += '[' + f.type + ': ' + f.name + ' (' + f.size + ')] ';
+                                        });
+                                    }
+                                    alertSuccess.innerHTML = msg;
+                                    alertSuccess.classList.remove('d-none');
+                                    form.reset();
+                                    form.classList.remove('was-validated');
+                                    if (labelGpkd) labelGpkd.classList.add('d-none');
+                                    if (labelCccd) labelCccd.classList.add('d-none');
+                                } else {
+                                    let errMsg = data.message || 'Có lỗi xảy ra khi gửi đăng ký.';
+                                    if (data.errors) {
+                                        errMsg = Object.values(data.errors).flat().join('<br>');
+                                    }
+                                    if (errMsg.includes('SQLSTATE') || errMsg.includes('SQL') || errMsg.includes('Exception') || errMsg.includes('SQLSTATE[HY000]')) {
+                                        errMsg = 'Lỗi hệ thống: Không thể kết nối cơ sở dữ liệu';
+                                    }
+                                    alertError.innerHTML = errMsg;
+                                    alertError.classList.remove('d-none');
+                                }
+                            })
+                            .catch(err => {
+                                btnSubmitRegister.disabled = false;
+                                btnText.classList.remove('d-none');
+                                btnLoading.classList.add('d-none');
+                                let errMsg = 'Không thể kết nối máy chủ. Vui lòng thử lại.';
+                                if (err && err.errors) {
+                                    errMsg = Object.values(err.errors).flat().join('<br>');
+                                } else if (err && err.message) {
+                                    errMsg = err.message;
+                                    if (errMsg.includes('SQLSTATE') || errMsg.includes('SQL') || errMsg.includes('Exception') || errMsg.includes('SQLSTATE[HY000]')) {
+                                        errMsg = 'Lỗi hệ thống: Không thể kết nối.';
+                                    }
+                                }
+                                alertError.innerHTML = errMsg;
+                                alertError.classList.remove('d-none');
+                            });
+                    });
+                }
+            });
+        </script>
+    </div>
+    <!-- content close -->
+
+    <a href="#" id="back-to-top"></a>
+
+    <!-- footer begin -->
+    <footer class="footer-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-xs-1">
+                    <div class="widget">
+                        <h5>Plans</h5>
+                        <ul>
+                            <li><a href="#">Private Office</a></li>
+                            <li><a href="#">Coworking Space</a></li>
+                            <li><a href="#">Virtual Office</a></li>
+                            <li><a href="#">Meeting Room</a></li>
+                            <li><a href="#">Dedicated Desk</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-1">
+                    <div class="widget">
+                        <h5>Company</h5>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">News</a></li>
+                            <li><a href="#">Jobs</a></li>
+                            <li><a href="#">Franchise</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-1">
+                    <div class="widget">
+                        <h5>Events</h5>
+                        <ul>
+                            <li><a href="#">Jump Start Your Bussines</a></li>
+                            <li><a href="#">Web Development Meet Up</a></li>
+                            <li><a href="#">Envato Summer Meet Up</a></li>
+                            <li><a href="#">Dribbble Meet Up Sydney</a></li>
+                            <li><a href="#">International Education Expo</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-1">
+                    <div class="widget">
+                        <h5>Newsletter</h5>
+                        <p>Signup for our newsletter to get the latest news in your inbox.</p>
+                        <form action="https://www.designesia.com/themes/cospace/blank.php" class="row form-dark"
+                            id="form_subscribe" method="post" name="form_subscribe">
+                            <div class="col text-center">
+                                <input class="form-control" id="txt_subscribe" name="txt_subscribe"
+                                    placeholder="enter your email" type="text" /> <a href="#" id="btn-subscribe"><i
+                                        class="arrow_right bg-color-secondary"></i></a>
+                                <div class="clearfix"></div>
+                            </div>
+                        </form>
+                        <div class="spacer-10"></div>
+                        <small>Your email is safe with us. We don't spam.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="subfooter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="de-flex">
+                            <div class="de-flex-col">
+                                <a href="index.html">
+                                    <img alt="" class="f-logo" src="images/logo.png" /><span class="copy">&copy;
+                                        Copyright 2025 - CoSpace by Designesia</span>
+                                </a>
+                            </div>
+                            <div class="de-flex-col">
+                                <div class="social-icons">
+                                    <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+                                    <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                                    <a href="#"><i class="fa fa-linkedin fa-lg"></i></a>
+                                    <a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
+                                    <a href="#"><i class="fa fa-rss fa-lg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer close -->
+
+    </div>
+
+    <div id="selector">
+        <div id="demo-rtl" class="sc-opt">
+            <div class="sc-icon">RTL</div><span class="sc-val">Click to Enable</span>
+        </div>
+        <div class="sc-opt sc-mt">
+            <div class="sc-icon"><i class="fa fa-eyedropper"></i></div>
+            <span class="opt tc1" data-color="scheme-01"></span>
+            <span class="opt tc2" data-color="scheme-02"></span>
+            <span class="opt tc3" data-color="scheme-03"></span>
+            <span class="opt tc4" data-color="scheme-04"></span>
+            <span class="opt tc5" data-color="scheme-05"></span>
+            <span class="opt tc6" data-color="scheme-06"></span>
+            <span class="opt tc7" data-color="scheme-07"></span>
+        </div>
+    </div>
+
+    <!-- Javascript Files
+    ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/lenis.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/OwlCarousel2Thumbs.min.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/enquire.min.js"></script>
+    <script src="js/jquery.plugin.js"></script>
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/jquery.countdown.js"></script>
+    <script src="js/jquery.lazy.min.js"></script>
+    <script src="js/jquery.lazy.plugins.min.js"></script>
+    <script src="js/jquery.smartsticky.min.html"></script>
+    <script src="js/designesia.js"></script>
+
+
+</body>
+
+</html>
