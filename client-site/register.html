@@ -83,6 +83,34 @@
             font-size: 0.75rem;
             color: #6c757d;
         }
+
+        /* 3. Thanh cuộn mượt mà cho Form */
+        .form-scroll-box {
+            max-height: 80vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            padding-right: 12px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .form-scroll-box::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        .form-scroll-box::-webkit-scrollbar-track {
+            background: #f1f3f5;
+            border-radius: 10px;
+        }
+
+        .form-scroll-box::-webkit-scrollbar-thumb {
+            background: #1DA599;
+            border-radius: 10px;
+        }
+
+        .form-scroll-box::-webkit-scrollbar-thumb:hover {
+            background: #15857b;
+        }
     </style>
 </head>
 
@@ -149,163 +177,216 @@
                     <div class="center-y relative">
                         <div class="container">
                             <div class="row align-items-center">
-                                <!-- Left Column: Hero Intro text giống trang đăng nhập -->
-                                <div class="col-lg-6 text-light wow fadeInRight" data-wow-delay=".5s">
+                                <!-- Left Column: Hero Intro text -->
+                                <div class="col-lg-5 text-light mb-4 mb-lg-0 wow fadeInRight" data-wow-delay=".5s">
                                     <div class="spacer-10"></div>
                                     <h1>Hệ Thống Quản Lý Văn Phòng Ảo VioOffice</h1>
-                                    <p class="lead">Đăng ký tài khoản thành viên để sở hữu địa chỉ đăng ký kinh doanh
-                                        hợp pháp
-                                        ngay tại các tòa nhà cao ốc hạng A ở TP.HCM và Hà Nội trong 5 phút.</p>
+                                    <p class="lead">Đăng ký tài khoản để sở hữu địa chỉ đăng ký kinh doanh hợp pháp ngay
+                                        tại các tòa nhà cao ốc hạng A ở TP.HCM và Hà Nội trong 5 phút.</p>
                                     <ul class="list-unstyled mt-4">
-                                        <li class="mb-2"><i class="fa fa-check text-success me-2"></i> Địa chỉ hợp pháp
-                                            100%,
-                                            đáp ứng điều kiện cấp GPKD & xuất hóa đơn</li>
-                                        <li class="mb-2"><i class="fa fa-check text-success me-2"></i> Lễ tân chuyên
-                                            nghiệp tiếp
-                                            đón khách, thông báo bưu phẩm qua Zalo/Email</li>
-                                        <li class="mb-2"><i class="fa fa-check text-success me-2"></i> Miễn phí giờ sử
-                                            dụng
-                                            phòng họp hiện đại LED 4K & sảnh tiếp khách</li>
-                                        <li class="mb-2"><i class="fa fa-check text-success me-2"></i> Đăng ký trực
-                                            tuyến siêu
-                                            tốc - Chuyên viên bàn giao hồ sơ ngay lập tức</li>
+                                        <li class="mb-3"><i class="fa fa-check text-success me-2"></i> Địa chỉ hợp pháp
+                                            100%, đáp ứng điều kiện cấp GPKD & xuất hóa đơn</li>
+                                        <li class="mb-3"><i class="fa fa-check text-success me-2"></i> Lễ tân chuyên
+                                            nghiệp tiếp đón khách, thông báo bưu phẩm qua Zalo/Email</li>
+                                        <li class="mb-3"><i class="fa fa-check text-success me-2"></i> Miễn phí giờ sử
+                                            dụng phòng họp hiện đại LED 4K & sảnh tiếp khách</li>
+                                        <li class="mb-3"><i class="fa fa-check text-success me-2"></i> Đăng ký trực
+                                            tuyến siêu tốc - Chuyên viên bàn giao hồ sơ ngay lập tức</li>
                                     </ul>
                                 </div>
 
-                                <!-- Right Column: Box Đăng Ký Tài Khoản giống Box Đăng Nhập -->
-                                <div class="col-lg-5 offset-lg-1 wow fadeIn" data-wow-delay=".5s">
-                                    <div class="box-rounded padding40" data-bgcolor="#ffffff"
-                                        style="max-height: 85vh; overflow-y: auto;">
-                                        <h3 class="mb10">Đăng Ký Tài Khoản</h3>
-                                        <p>Đã có tài khoản thành viên? Đăng nhập <a href="login.html">tại
-                                                đây<span></span></a>.</p>
+
+                                <div class="col-lg-7 wow fadeIn" data-wow-delay=".5s">
+                                    <div class="box-rounded p-4 p-md-5" data-bgcolor="#ffffff"
+                                        style="border-radius: 12px; box-shadow: 0 15px 45px rgba(0,0,0,0.12);">
+                                        <h3 class="mb-1" style="font-weight: 700; color: #222;">Đăng Ký Đặt Thuê Văn
+                                            Phòng</h3>
+
 
                                         <!-- Thông báo Alert -->
                                         <div id="register-alert" class="alert alert-success d-none small mb-3"
-                                            role="alert">
-                                        </div>
+                                            role="alert"></div>
                                         <div id="register-error" class="alert alert-danger d-none small mb-3"
-                                            role="alert">
-                                        </div>
+                                            role="alert"></div>
 
                                         <!-- Form với Bootstrap Was-Validated + HTML5 Validation -->
                                         <form name="registerForm" id="vio_register_form"
                                             class="form-border needs-validation" method="post"
                                             enctype="multipart/form-data" novalidate>
-                                            @csrf
 
-                                            <!-- 1. Chọn Gói (Màu xanh lá theo yêu cầu) -->
-                                            <div class="field-set mb-3">
+
+                                            <!-- 1. Gói dịch vụ -->
+                                            <div class="mb-3">
+                                                <label class="form-label fw-bold text-dark mb-1">Gói văn phòng muốn thuê
+                                                    *</label>
                                                 <select name="package" id="package"
-                                                    class="form-control select-package-green" required>
+                                                    class="form-control select-package-green" required
+                                                    style="height: 46px;">
                                                     <option value="Gói Tiêu Chuẩn (699.000đ/tháng)" selected>Gói Tiêu
-                                                        Chuẩn -
-                                                        699.000đ/tháng (Phổ biến nhất)</option>
+                                                        Chuẩn - 699.000đ/tháng (Phổ biến nhất)</option>
                                                     <option value="Gói Tiết Kiệm (399.000đ/tháng)">Gói Tiết Kiệm -
                                                         399.000đ/tháng</option>
                                                     <option value="Gói VIP / Pro (1.199.000đ/tháng)">Gói VIP / Pro -
                                                         1.199.000đ/tháng</option>
-                                                    <option value="Gói Gói Theo Ngày (Theo ngày)">Gói Gói Theo Ngày -
+                                                    <option value="Gói Theo Ngày (199.000đ/ngày)">Gói Theo Ngày -
                                                         199.000đ/ngày</option>
+                                                    <option value="Văn phòng trọn gói (2.500.000đ/tháng)">Văn phòng trọn
+                                                        gói - 2.500.000đ/tháng</option>
+                                                    <option value="Phòng họp (200.000đ/giờ)">Phòng họp theo giờ -
+                                                        200.000đ/giờ</option>
                                                 </select>
                                                 <div class="invalid-feedback">Vui lòng chọn gói dịch vụ.</div>
                                             </div>
 
-                                            <!-- 2. Tên doanh nghiệp -->
-                                            <div class="field-set mb-3">
-                                                <input type="text" name="company_name" id="company_name"
-                                                    class="form-control" placeholder="Tên doanh nghiệp / Công ty *"
-                                                    required minlength="3" maxlength="150"
-                                                    title="Tên doanh nghiệp/cá nhân phải từ 3 đến 150 ký tự">
-                                                <div class="invalid-feedback">Vui lòng nhập tên doanh nghiệp / công ty
-                                                    (ít nhất
-                                                    3 ký tự).</div>
-                                            </div>
-
-                                            <!-- 3. Điện thoại & Email -->
-                                            <div class="row g-2 mb-3">
-                                                <div class="col-6">
-                                                    <input type="tel" name="phone" id="phone" class="form-control"
-                                                        placeholder="Số điện thoại *" required
-                                                        pattern="^(0|84)(2(0[3-9]|1[0-8]|2[0-25-9]|3[2-9]|4[0-9]|5[124-9]|6[0-35-9]|7[0-7]|8[0-9]|9[0-4678]|3[0-9]|4[0123456789]|5[12456789]|6[0123456789]|7[0123456789]|8[0123456789]|9[0123456789])|3[2-9]|5[5689]|7[06-9]|8[1-689]|9[0-46-9])[0-9]{7}$"
-                                                        title="Vui lòng nhập số điện thoại Việt Nam hợp lệ (10 chữ số)">
-                                                    <div class="invalid-feedback">Số điện thoại 10 chữ số hợp lệ (bắt
-                                                        đầu 0 hoặc
-                                                        84).</div>
+                                            <div class="row g-3">
+                                                <!-- 2. Họ tên người đại diện & Số điện thoại -->
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold text-dark mb-1">Họ tên người đại
+                                                        diện *</label>
+                                                    <input type="text" name="representative_name"
+                                                        id="representative_name" class="form-control"
+                                                        placeholder="Nhập họ và tên người đại diện" required
+                                                        minlength="2" maxlength="150">
+                                                    <div class="invalid-feedback">Vui lòng nhập họ tên người đại diện.
+                                                    </div>
                                                 </div>
-                                                <div class="col-6">
+
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold text-dark mb-1">Số điện thoại liên
+                                                        hệ *</label>
+                                                    <input type="tel" name="phone" id="phone" class="form-control"
+                                                        placeholder="Nhập số điện thoại (10 chữ số)" required
+                                                        pattern="^(0|84)(2(0[3-9]|1[0-8]|2[0-25-9]|3[2-9]|4[0-9]|5[124-9]|6[0-35-9]|7[0-7]|8[0-9]|9[0-4678]|3[0-9]|4[0123456789]|5[12456789]|6[0123456789]|7[0123456789]|8[0123456789]|9[0123456789])|3[2-9]|5[5689]|7[06-9]|8[1-689]|9[0-46-9])[0-9]{7}$">
+                                                    <div class="invalid-feedback">Số điện thoại không hợp lệ.</div>
+                                                </div>
+
+                                                <!-- 3. Email & Tên công ty -->
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold text-dark mb-1">Địa chỉ Email
+                                                        *</label>
                                                     <input type="email" name="email" id="email" class="form-control"
-                                                        placeholder="Email *" required
+                                                        placeholder="Vd: contact@company.com" required
                                                         pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$"
-                                                        autocomplete="username" title="Vui lòng nhập email hợp lệ">
+                                                        autocomplete="username">
                                                     <div class="invalid-feedback">Vui lòng nhập đúng định dạng email.
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <!-- 4. Mật khẩu & Xác nhận mật khẩu -->
-                                            <div class="row g-2 mb-3">
-                                                <div class="col-6">
-                                                    <input type="password" name="password" id="password"
-                                                        class="form-control" placeholder="Mật khẩu *" required
-                                                        minlength="8" autocomplete="new-password"
-                                                        title="Mật khẩu từ 8 ký tự trở lên">
-                                                    <div class="invalid-feedback">Mật khẩu phải từ 8 ký tự.</div>
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold text-dark mb-1">Tên công ty dự kiến
+                                                        đăng ký</label>
+                                                    <input type="text" name="company_name" id="company_name"
+                                                        class="form-control"
+                                                        placeholder="Nhập tên doanh nghiệp / công ty">
                                                 </div>
-                                                <div class="col-6">
-                                                    <input type="password" name="password_confirmation"
-                                                        id="password_confirmation" class="form-control"
-                                                        placeholder="Xác nhận mật khẩu *" required minlength="8"
-                                                        autocomplete="new-password"
-                                                        title="Vui lòng nhập lại mật khẩu khớp">
-                                                    <div class="invalid-feedback" id="pwd_confirm_feedback">Xác nhận mật
-                                                        khẩu
-                                                        không khớp.</div>
-                                                </div>
-                                            </div>
 
-                                            <!-- 5. Phần upload cho ô vuông to một ít (Drag & Drop) -->
-                                            <div class="row g-2 mb-3">
-                                                <div class="col-6">
-                                                    <div class="upload-square-box" id="box_gpkd">
-                                                        <i class="fa fa-file-pdf-o"></i>
-                                                        <div class="upload-title">Upload GPKD / Thuế</div>
-                                                        <div class="upload-sub">Kéo thả hoặc bấm (.pdf, .jpg)</div>
-                                                        <span id="label_gpkd"
-                                                            class="badge bg-success mt-2 d-none text-truncate"
-                                                            style="max-width: 90%;"></span>
-                                                        <input type="file" name="gpkd_file" id="gpkd_file"
-                                                            class="d-none" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
-                                                    </div>
+                                                <!-- 4. Mã số thuế & Địa chỉ công ty -->
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold text-dark mb-1">Mã số doanh nghiệp
+                                                        / Mã số thuế</label>
+                                                    <input type="text" name="tax_code" id="tax_code"
+                                                        class="form-control"
+                                                        placeholder="Nhập MSDN hoặc mã số thuế (nếu có)">
                                                 </div>
-                                                <div class="col-6">
-                                                    <div class="upload-square-box" id="box_cccd"
-                                                        style="border-color: #0d6efd !important;">
-                                                        <i class="fa fa-id-card-o" style="color: #0d6efd;"></i>
-                                                        <div class="upload-title">Upload CCCD / Hộ chiếu</div>
-                                                        <div class="upload-sub">Kéo thả hoặc bấm (.pdf, .jpg)</div>
-                                                        <span id="label_cccd"
-                                                            class="badge bg-primary mt-2 d-none text-truncate"
-                                                            style="max-width: 90%;"></span>
-                                                        <input type="file" name="cccd_file" id="cccd_file"
-                                                            class="d-none" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold text-dark mb-1">Địa chỉ công
+                                                        ty</label>
+                                                    <input type="text" name="company_address" id="company_address"
+                                                        class="form-control" placeholder="Nhập địa chỉ trụ sở công ty">
+                                                </div>
+
+                                                <!-- 5. Ngành nghề kinh doanh & Số lượng người sử dụng -->
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold text-dark mb-1">Ngành nghề kinh
+                                                        doanh</label>
+                                                    <input type="text" name="industry" id="industry"
+                                                        class="form-control"
+                                                        placeholder="Vd: Công nghệ, thương mại, tư vấn...">
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold text-dark mb-1">Số lượng người sử
+                                                        dụng</label>
+                                                    <input type="number" name="user_count" id="user_count"
+                                                        class="form-control" placeholder="Vd: 5 người" min="1">
+                                                </div>
+
+                                                <!-- 6. Thời hạn thuê & Ngày bắt đầu dự kiến -->
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold text-dark mb-1">Thời hạn
+                                                        thuê</label>
+                                                    <input type="text" name="lease_term" id="lease_term"
+                                                        class="form-control" placeholder="Vd: 6 tháng, 1 năm, 2 năm...">
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label class="form-label fw-bold text-dark mb-1">Ngày bắt đầu dự
+                                                        kiến</label>
+                                                    <input type="text" name="start_date" id="start_date"
+                                                        class="form-control" placeholder="Chọn ngày bắt đầu"
+                                                        onfocus="(this.type='date')" onblur="(this.type='text')">
+                                                </div>
+
+                                                <!-- 7. Nhu cầu bổ sung -->
+                                                <div class="col-12">
+                                                    <label class="form-label fw-bold text-dark mb-1">Nhu cầu bổ
+                                                        sung</label>
+                                                    <textarea name="extra_needs" id="extra_needs" class="form-control"
+                                                        rows="2"
+                                                        placeholder="Nhận thư, phòng họp, số điện thoại riêng, bảng tên biển hiệu, địa chỉ giao dịch..."></textarea>
+                                                </div>
+
+                                                <!-- 8. Tài liệu đính kèm -->
+                                                <div class="col-12">
+                                                    <label class="form-label fw-bold text-dark mb-1">Tài liệu đính kèm
+                                                        (CCCD/Hộ chiếu, Giấy ĐKKD, Giấy ủy quyền...)</label>
+                                                    <div class="row g-2">
+                                                        <div class="col-md-6">
+                                                            <div class="upload-square-box" id="box_gpkd">
+                                                                <i class="fa fa-file-pdf-o"></i>
+                                                                <div class="upload-title">Upload GPKD / Thuế / Giấy UQ
+                                                                </div>
+                                                                <div class="upload-sub">Kéo thả hoặc bấm (.pdf, .jpg)
+                                                                </div>
+                                                                <span id="label_gpkd"
+                                                                    class="badge bg-success mt-2 d-none text-truncate"
+                                                                    style="max-width: 90%;"></span>
+                                                                <input type="file" name="gpkd_file" id="gpkd_file"
+                                                                    class="d-none"
+                                                                    accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" multiple>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="upload-square-box" id="box_cccd"
+                                                                style="border-color: #0d6efd !important;">
+                                                                <i class="fa fa-id-card-o" style="color: #0d6efd;"></i>
+                                                                <div class="upload-title">Upload CCCD / Hộ chiếu</div>
+                                                                <div class="upload-sub">Kéo thả hoặc bấm (.pdf, .jpg)
+                                                                </div>
+                                                                <span id="label_cccd"
+                                                                    class="badge bg-primary mt-2 d-none text-truncate"
+                                                                    style="max-width: 90%;"></span>
+                                                                <input type="file" name="cccd_file" id="cccd_file"
+                                                                    class="d-none"
+                                                                    accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" multiple>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <!-- Điều khoản -->
-                                            <div class="mb-3">
+                                            <div class="my-3">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="checkbox" name="terms"
                                                         id="terms" required checked>
                                                     <label class="form-check-label small text-muted" for="terms">
-                                                        Đồng ý với <a href="#"
+                                                        Tôi đồng ý với <a href="#"
                                                             class="text-primary text-decoration-underline">Điều khoản
-                                                            dịch
-                                                            vụ</a> và <a href="#"
+                                                            dịch vụ</a> và <a href="#"
                                                             class="text-primary text-decoration-underline">Chính sách
-                                                            bảo
-                                                            mật</a>.
+                                                            bảo mật</a>.
                                                     </label>
                                                     <div class="invalid-feedback">Bạn cần đồng ý với điều khoản dịch vụ.
                                                     </div>
@@ -314,28 +395,13 @@
 
                                             <div class="field-set">
                                                 <button type="submit" id="btn_submit_register"
-                                                    class="btn btn-main btn-fullwidth color-2">
-                                                    <span id="btn_text">Đăng Ký Tài Khoản</span>
+                                                    class="btn btn-main btn-fullwidth color-2 py-3"
+                                                    style="font-size: 15px; font-weight: bold; border-radius: 6px;">
+                                                    <span id="btn_text">Gửi Đăng Ký Thuê Văn Phòng</span>
                                                     <span id="btn_loading" class="d-none"><i
                                                             class="fa fa-spinner fa-spin me-2"></i>Đang xử lý...</span>
                                                 </button>
                                             </div>
-
-                                            <div class="clearfix"></div>
-
-                                            <div class="spacer-single"></div>
-
-                                            <!-- social icons -->
-                                            <ul class="list s3">
-                                                <li>Đăng ký nhanh qua:</li>
-                                                <li><a href="#"
-                                                        onclick="event.preventDefault(); alert('Đăng ký qua Facebook');">Facebook</a>
-                                                </li>
-                                                <li><a href="#"
-                                                        onclick="event.preventDefault(); alert('Đăng ký qua Google');">Google</a>
-                                                </li>
-                                            </ul>
-                                            <!-- social icons close -->
                                         </form>
                                     </div>
                                 </div>
@@ -405,29 +471,10 @@
                 const btnSubmitRegister = document.getElementById('btn_submit_register');
                 const btnText = document.getElementById('btn_text');
                 const btnLoading = document.getElementById('btn_loading');
-                const pwdInput = document.getElementById('password');
-                const pwdConfirmInput = document.getElementById('password_confirmation');
-                const pwdConfirmFeedback = document.getElementById('pwd_confirm_feedback');
 
                 if (form) {
-                    // Kiểm tra khớp mật khẩu ngay khi gõ
-                    function validatePasswordMatch() {
-                        if (pwdInput && pwdConfirmInput) {
-                            if (pwdConfirmInput.value !== pwdInput.value) {
-                                pwdConfirmInput.setCustomValidity('Xác nhận mật khẩu không khớp!');
-                                if (pwdConfirmFeedback) pwdConfirmFeedback.textContent = 'Xác nhận mật khẩu không khớp với mật khẩu.';
-                            } else {
-                                pwdConfirmInput.setCustomValidity('');
-                                if (pwdConfirmFeedback) pwdConfirmFeedback.textContent = 'Vui lòng xác nhận lại mật khẩu.';
-                            }
-                        }
-                    }
-                    if (pwdInput) pwdInput.addEventListener('input', validatePasswordMatch);
-                    if (pwdConfirmInput) pwdConfirmInput.addEventListener('input', validatePasswordMatch);
-
                     form.addEventListener('submit', function (e) {
                         e.preventDefault();
-                        validatePasswordMatch();
 
                         // Kiểm tra validation (HTML5 Validation & Bootstrap Was-Validated)
                         if (!form.checkValidity()) {
