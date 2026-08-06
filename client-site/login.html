@@ -23,6 +23,7 @@
     <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" />
     <link href="css/coloring.css" rel="stylesheet" type="text/css" />
     <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/custom-forms.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -97,35 +98,32 @@
                                 </div>
 
                                 <div class="col-lg-4 offset-lg-1 wow fadeIn" data-wow-delay=".5s">
-                                    <div class="box-rounded padding40" data-bgcolor="#ffffff"
-                                        style="box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-radius: 4px;">
-                                        <h3 class="mb30" style="font-weight: 800; font-size: 20px; color: #333;">Đăng
-                                            nhập</h3>
+                                    <div class="box-rounded p-4 p-md-4 login-card-glass">
+                                        <h3 class="mb-3" style="font-weight: 800; font-size: 22px; color: #1e293b;">Đăng nhập</h3>
                                         <form name="contactForm" id='contact_form' class="form-border" method="post"
                                             action='#'>
 
-                                            <div class="field-set">
+                                            <div class="field-set mb-3">
+                                                <label class="form-label" style="font-size: 13px; font-weight: 600; color: #475569;">Địa chỉ Email</label>
                                                 <input type='text' name='email' id='email' class="form-control"
-                                                    placeholder="Email" required style="border-radius: 4px;">
+                                                    placeholder="Nhập email của bạn..." required>
                                             </div>
 
-                                            <div class="field-set">
+                                            <div class="field-set mb-3">
+                                                <label class="form-label" style="font-size: 13px; font-weight: 600; color: #475569;">Mật khẩu</label>
                                                 <input type='password' name='password' id='password'
-                                                    class="form-control" placeholder="Mật khẩu" required
-                                                    style="border-radius: 4px;">
+                                                    class="form-control" placeholder="Nhập mật khẩu..." required>
                                             </div>
 
-                                            <div class="field-set" style="margin-top: 20px;">
-                                                <input type='submit' id='send_message' value='Đăng nhập'
-                                                    class="btn btn-main color-2"
-                                                    style="background-color: #1DA599; border-color: #1DA599; font-weight: bold; font-size: 13px; padding: 8px 30px; letter-spacing: 0; border-radius: 4px; color: white;">
+                                            <div class="field-set mt-4">
+                                                <button type='submit' id='send_message' class="btn btn-login-submit py-3">
+                                                    <i class="fa fa-sign-in me-2"></i>Đăng nhập
+                                                </button>
                                             </div>
                                             <div class="clearfix"></div>
 
-                                            <div class="spacer-10"></div>
-                                            <div class="text-left" style="margin-top: 10px;">
-                                                <a href="#" style="color: #666; font-size: 13px; font-weight: 600;">Đổi
-                                                    mật khẩu</a>
+                                            <div class="text-center mt-3">
+                                                <a href="#" style="color: #64748b; font-size: 13px; font-weight: 600;">Quên mật khẩu?</a>
                                             </div>
                                         </form>
                                     </div>
