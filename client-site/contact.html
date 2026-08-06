@@ -91,7 +91,7 @@
                         <div class="row">
 
                             <div class="col-md-12 text-center">
-                                <h1>Contact Us</h1>
+                                <h1>LIÊN HỆ</h1>
                             </div>
                             <div class="clearfix"></div>
                         </div>
@@ -106,49 +106,133 @@
                     <div class="row">
 
                         <div class="col-lg-8 mb-sm-30">
-                            <h3>Do you have any question?</h3>
+                            <h3>Bạn có câu hỏi nào không?</h3>
 
                             <form name="contactForm" id="contact_form" class="form-border" method="post"
-                                action="https://www.designesia.com/themes/cospace/email.php">
-                                <div class="field-set">
-                                    <input type="text" name="name" id="name" class="form-control"
-                                        placeholder="Your Name" />
-                                </div>
+                                action="https://www.designesia.com/themes/cospace/email.php"
+                                enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-md-6 mb10">
+                                        <div class="field-set">
+                                            <input type="text" name="name" id="name" class="form-control"
+                                                placeholder="Họ tên người đại diện" />
+                                        </div>
+                                    </div>
 
-                                <div class="field-set">
-                                    <input type="text" name="email" id="email" class="form-control"
-                                        placeholder="Your Email" />
-                                </div>
+                                    <div class="col-md-6 mb10">
+                                        <div class="field-set">
+                                            <input type="text" name="phone" id="phone" class="form-control"
+                                                placeholder="Số điện thoại" />
+                                        </div>
+                                    </div>
 
-                                <div class="field-set">
-                                    <input type="text" name="phone" id="phone" class="form-control"
-                                        placeholder="Your Phone" />
-                                </div>
+                                    <div class="col-md-6 mb10">
+                                        <div class="field-set">
+                                            <input type="text" name="email" id="email" class="form-control"
+                                                placeholder="Email liên hệ" />
+                                        </div>
+                                    </div>
 
-                                <div class="field-set">
-                                    <textarea name="message" id="message" class="form-control"
-                                        placeholder="Your Message"></textarea>
+                                    <div class="col-md-6 mb10">
+                                        <div class="field-set">
+                                            <input type="text" name="company_name" id="company_name"
+                                                class="form-control" placeholder="Tên công ty dự kiến đăng ký" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb10">
+                                        <div class="field-set">
+                                            <input type="text" name="tax_code" id="tax_code" class="form-control"
+                                                placeholder="Mã số doanh nghiệp hoặc mã số thuế nếu đã có" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb10">
+                                        <div class="field-set">
+                                            <input type="text" name="company_address" id="company_address"
+                                                class="form-control" placeholder="Địa chỉ công ty" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb10">
+                                        <div class="field-set">
+                                            <input type="text" name="industry" id="industry" class="form-control"
+                                                placeholder="Ngành nghề kinh doanh" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb10">
+                                        <div class="field-set">
+                                            <select name="package" id="package" class="form-control">
+                                                <option value="">-- Gói văn phòng muốn thuê --</option>
+                                                <option value="399.000đ/tháng">399.000đ / tháng</option>
+                                                <option value="699.000đ/tháng">699.000đ / tháng</option>
+                                                <option value="1.199.000đ/tháng">1.199.000đ / tháng</option>
+                                                <option value="199.000đ/ngày">199.000đ / ngày</option>
+                                                <option value="2.500.000đ/tháng">2.500.000đ / tháng</option>
+                                                <option value="200.000đ/giờ">200.000đ / giờ</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb10">
+                                        <div class="field-set">
+                                            <input type="text" name="lease_term" id="lease_term" class="form-control"
+                                                placeholder="Thời hạn thuê (VD: 6 tháng, 1 năm...)" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 mb10">
+                                        <div class="field-set">
+                                            <input type="text" name="start_date" id="start_date" class="form-control"
+                                                placeholder="Ngày bắt đầu dự kiến" onfocus="(this.type='date')"
+                                                onblur="(this.type='text')" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 mb10">
+                                        <div class="field-set">
+                                            <input type="number" name="user_count" id="user_count" class="form-control"
+                                                placeholder="Số lượng người sử dụng" min="1" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 mb10">
+                                        <div class="field-set">
+                                            <textarea name="message" id="message" class="form-control"
+                                                placeholder="Nội dung liên hệ / Nhu cầu bổ sung: nhận thư, phòng họp, số điện thoại, biển hiệu, địa chỉ giao dịch..."></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12 mb10">
+                                        <div class="field-set">
+                                            <label style="display: block; margin-bottom: 5px; color: #555;">Tài liệu
+                                                đính kèm (CCCD/hộ chiếu, giấy đăng ký doanh nghiệp, giấy ủy quyền nếu
+                                                người đăng ký không phải đại diện pháp luật):</label>
+                                            <input type="file" name="attachment" id="attachment" class="form-control"
+                                                multiple />
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="spacer-half"></div>
 
                                 <div id="submit">
-                                    <input type="submit" id="send_message" value="Submit Form" class="btn btn-main" />
+                                    <input type="submit" id="send_message" value="Gửi liên hệ" class="btn btn-main" />
                                 </div>
-                                <div id="mail_success" class="success">Your message has been sent successfully.</div>
-                                <div id="mail_fail" class="error">Sorry, error occured this time sending your message.
-                                </div>
+                                <div id="mail_success" class="success">Tin nhắn của bạn đã được gửi thành công.</div>
+                                <div id="mail_fail" class="error">Rất tiếc, đã có lỗi xảy ra khi gửi tin nhắn.</div>
                             </form>
                         </div>
 
                         <div class="col-lg-4">
 
                             <div class="padding40 box-rounded mb30" data-bgcolor="#F2F6FE">
-                                <h3>US Office</h3>
+                                <h3>Trụ sở chính - Hà Nội</h3>
                                 <address class="s1">
-                                    <span><i class="id-color fa fa-map-marker fa-lg"></i>08 W 36th St, New York, NY
-                                        10001</span>
-                                    <span><i class="id-color fa fa-phone fa-lg"></i>+1 333 9296</span>
+                                    <span><i class="id-color fa fa-map-marker fa-lg"></i>Tầng 5, Tháp A, Tòa nhà
+                                        KeangNam, đường Dương Đình Nghệ, phường Yên Hòa, Hà Nội</span>
+                                    <span><i class="id-color fa fa-phone fa-lg"></i>+84 888888888</span>
                                     <span><i class="id-color fa fa-envelope-o fa-lg"></i><a
                                             href="mailto:contact@example.com">contact@example.com</a></span>
                                     <span><i class="id-color fa fa-file-pdf-o fa-lg"></i><a href="#">Download
@@ -156,15 +240,16 @@
                                 </address>
                             </div>
 
-
                             <div class="padding40 bg-color text-light box-rounded">
-                                <h3>AU Office</h3>
+                                <h3>Hệ thống văn phòng ảo 3 Miền</h3>
                                 <address class="s1">
-                                    <span><i class="fa fa-map-marker fa-lg"></i>100 Mainstreet Center, Sydney</span>
+                                    <span><i class="fa fa-map-marker fa-lg"></i>Hỗ trợ điều phối mặt bằng và pháp lý
+                                        liên quan tại Đà Nẵng và TP. Hồ Chí Minh</span>
                                     <span><i class="fa fa-phone fa-lg"></i>+61 333 9296</span>
                                     <span><i class="fa fa-envelope-o fa-lg"></i><a
                                             href="mailto:contact@example.com">contact@example.com</a></span>
-                                    <span><i class="fa fa-file-pdf-o fa-lg"></i><a href="#">Download Brochure</a></span>
+                                    <span><i class="fa fa-file-pdf-o fa-lg"></i><a href="#">Xem danh sách tòa
+                                            nhà</a></span>
                                 </address>
                             </div>
 
