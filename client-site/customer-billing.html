@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <title>Quản Lý Thanh Toán & Hóa Đơn - VIOSPACE</title>
+    <link rel="icon" href="images/icon.svg" type="image/svg+xml" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- CSS Files ================================================== -->
+    <link id="bootstrap" href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link id="bootstrap-grid" href="css/bootstrap-grid.min.css" rel="stylesheet" type="text/css" />
+    <link id="bootstrap-reboot" href="css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
+    <link id="mdb" href="css/mdb.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" />
+    <link href="css/coloring.css" rel="stylesheet" type="text/css" />
+    <link href="css/dashboard.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!-- TOPBAR HEADER -->
+    <header class="topbar-header d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-2">
+            <button class="mobile-sidebar-toggle me-2" id="toggleSidebar" aria-label="Menu Toggle">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a href="index.html">
+                <img src="images/Group1.svg" alt="VIOSPACE Logo" style="height: 34px;">
+            </a>
+            <div class="user-greeting ms-2">
+                <span class="user-greeting-text">Xin chào </span>Nguyễn Văn A
+            </div>
+        </div>
+
+        <div class="topbar-actions">
+            <div class="icon-btn-bell" title="Thông báo">
+                <i class="fa fa-bell-o"></i>
+                <span class="notification-dot"></span>
+            </div>
+            <a href="#" class="btn-change-password">[Đổi mật khẩu]</a>
+            <div class="user-avatar-btn" title="Tài khoản cá nhân">
+                <i class="fa fa-user"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- BACKDROP OVERLAY FOR MOBILE SIDEBAR -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- DASHBOARD CONTAINER -->
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR MENU -->
+        <aside class="dashboard-sidebar">
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="customer-dashboard.html">
+                        <i class="fa fa-th-large"></i>
+                        <span>Tổng quan</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="customer-contracts.html">
+                        <i class="fa fa-file-text-o"></i>
+                        <span>Hợp đồng</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="customer-requests.html">
+                        <i class="fa fa-paper-plane-o"></i>
+                        <span>Yêu cầu</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="customer-upload.html">
+                        <i class="fa fa-cloud-upload"></i>
+                        <span>Tải lên hồ sơ</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="customer-billing.html">
+                        <i class="fa fa-credit-card"></i>
+                        <span>Thanh toán</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="dashboard-main-content">
+
+            <!-- PAGE HEADER TITLE (CENTERED 100%) -->
+            <div class="page-header-title mb-4">
+                <h2 style="font-size: 26px; font-weight: 800; color: #0f172a; text-transform: uppercase;">QUẢN LÝ THANH TOÁN & HÓA ĐƠN</h2>
+            </div>
+
+            <!-- BILLING CARD SECTION -->
+            <div class="invoice-section-card">
+                <div class="invoice-subtitle text-center mb-4" style="font-size: 18px; color: #1e293b; letter-spacing: 0.5px;">
+                    HÓA ĐƠN CHỜ THANH TOÁN
+                </div>
+
+                <!-- TABLE / LIST -->
+                <div class="table-responsive">
+                    <table class="table-custom-invoice">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Mã HĐ</th>
+                                <th>Dịch vụ</th>
+                                <th class="text-end">Số tiền</th>
+                                <th class="text-center">Trạng thái</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center font-monospace fw-bold text-primary">INV-26-001</td>
+                                <td>Đặt cọc VP ảo Hà Nội</td>
+                                <td class="text-end fw-bold text-dark">5.400.000 VNĐ</td>
+                                <td class="text-center">
+                                    <span class="status-tag unpaid">
+                                        <i class="fa fa-clock-o"></i> Chưa TT
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- ACTION BUTTON -->
+                <div class="text-center mt-4 pt-2">
+                    <button class="btn-pay-now" data-bs-toggle="modal" data-bs-target="#paymentModal">
+                        Thanh toán ngay
+                    </button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- MODAL THANH TOÁN DEMO -->
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0 shadow">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-dark" id="paymentModalLabel">Thanh Toán Hóa Đơn #INV-26-001</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <div class="mb-3">
+                        <small class="text-muted d-block">Số tiền cần thanh toán:</small>
+                        <h3 class="fw-bold text-success mb-0">5.400.000 VNĐ</h3>
+                    </div>
+
+                    <!-- DEMO QR CODE -->
+                    <div class="p-3 bg-light rounded-3 d-inline-block border mb-3">
+                        <img src="images/Group1.svg" alt="QR Payment Demo" style="height: 120px; opacity: 0.8;" class="mb-2 d-block mx-auto">
+                        <small class="fw-bold text-primary"><i class="fa fa-qrcode me-1"></i> Quét mã VietQR Ngân hàng</small>
+                    </div>
+
+                    <div class="text-start bg-light p-3 rounded-3" style="font-size: 13px;">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="text-muted">Ngân hàng:</span>
+                            <span class="fw-bold text-dark">MB Bank (NHTCP Quân Đội)</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="text-muted">Số tài khoản:</span>
+                            <span class="fw-bold text-dark font-monospace">8888 9999 666</span>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <span class="text-muted">Nội dung chuyển khoản:</span>
+                            <span class="fw-bold text-primary font-monospace">INV26001 TECHVISION</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-secondary w-100 rounded-pill py-2" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Files ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- MOBILE SIDEBAR TOGGLE SCRIPT -->
+    <script>
+        $(document).ready(function() {
+            $('#toggleSidebar, #sidebarOverlay').on('click', function() {
+                $('.dashboard-sidebar').toggleClass('show');
+                $('#sidebarOverlay').toggleClass('show');
+            });
+        });
+    </script>
+</body>
+
+</html>

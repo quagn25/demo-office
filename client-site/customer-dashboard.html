@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <title>Tổng Quan Hồ Sơ Đăng Ký - VIOSPACE</title>
+    <link rel="icon" href="images/icon.svg" type="image/svg+xml" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- CSS Files ================================================== -->
+    <link id="bootstrap" href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link id="bootstrap-grid" href="css/bootstrap-grid.min.css" rel="stylesheet" type="text/css" />
+    <link id="bootstrap-reboot" href="css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
+    <link id="mdb" href="css/mdb.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" />
+    <link href="css/coloring.css" rel="stylesheet" type="text/css" />
+    <link href="css/dashboard.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!-- TOPBAR HEADER -->
+    <header class="topbar-header d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-2">
+            <button class="mobile-sidebar-toggle me-2" id="toggleSidebar" aria-label="Menu Toggle">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a href="index.html">
+                <img src="images/Group1.svg" alt="VIOSPACE Logo" style="height: 34px;">
+            </a>
+            <div class="user-greeting ms-2">
+                <span class="user-greeting-text">Xin chào </span>Nguyễn Văn A
+            </div>
+        </div>
+
+        <div class="topbar-actions">
+            <div class="icon-btn-bell" title="Thông báo">
+                <i class="fa fa-bell-o"></i>
+                <span class="notification-dot"></span>
+            </div>
+            <a href="#" class="btn-change-password">[Đổi mật khẩu]</a>
+            <div class="user-avatar-btn" title="Tài khoản cá nhân">
+                <i class="fa fa-user"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- BACKDROP OVERLAY FOR MOBILE SIDEBAR -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- DASHBOARD CONTAINER -->
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR MENU -->
+        <aside class="dashboard-sidebar">
+            <ul class="sidebar-menu">
+                <li class="active">
+                    <a href="customer-dashboard.html">
+                        <i class="fa fa-th-large"></i>
+                        <span>Tổng quan</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="customer-contracts.html">
+                        <i class="fa fa-file-text-o"></i>
+                        <span>Hợp đồng</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="customer-requests.html">
+                        <i class="fa fa-paper-plane-o"></i>
+                        <span>Yêu cầu</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="customer-upload.html">
+                        <i class="fa fa-cloud-upload"></i>
+                        <span>Tải lên hồ sơ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="customer-billing.html">
+                        <i class="fa fa-credit-card"></i>
+                        <span>Thanh toán</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="dashboard-main-content">
+
+            <!-- PAGE HEADER -->
+            <div class="page-header-title">
+                <h2>TỔNG QUAN HỒ SƠ ĐĂNG KÝ</h2>
+                <div class="record-code-badge">
+                    Mã hồ sơ: #REQ-2026-001
+                </div>
+            </div>
+
+            <!-- CARD 1: TIẾN TRÌNH XÉT DUYỆT HỒ SƠ -->
+            <div class="content-box-card">
+                <div class="card-box-title">
+                    TIẾN TRÌNH XÉT DUYỆT HỒ SƠ
+                </div>
+
+                <ul class="progress-stepper-list">
+                    <li class="stepper-row-item current">
+                        <div class="stepper-num-circle">(1)</div>
+                        <div class="stepper-text-label">Đang được duyệt</div>
+                    </li>
+                    <li class="stepper-row-item">
+                        <div class="stepper-num-circle">(2)</div>
+                        <div class="stepper-text-label">Tiếp nhận hồ sơ</div>
+                    </li>
+                    <li class="stepper-row-item">
+                        <div class="stepper-num-circle">(3)</div>
+                        <div class="stepper-text-label">Đang tiến hành đăng ký</div>
+                    </li>
+                    <li class="stepper-row-item">
+                        <div class="stepper-num-circle">(4)</div>
+                        <div class="stepper-text-label">Đăng ký thành công</div>
+                    </li>
+                    <li class="stepper-row-item">
+                        <div class="stepper-num-circle">(5)</div>
+                        <div class="stepper-text-label">Hiển thị Hợp đồng</div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CARD 2: KHUNG CẢNH BÁO & HÀNH ĐỘNG -->
+            <div class="warning-notice-card">
+                <div class="warning-icon-wrapper">
+                    <i class="fa fa-exclamation-triangle"></i>
+                </div>
+                <div class="warning-text-content">
+                    Hệ thống đang soạn thảo hồ sơ pháp lý.<br>
+                    Vui lòng bổ sung bản scan Giấy phép kinh doanh để chúng tôi hoàn tất bước "Đăng ký thành công".
+                </div>
+                <a href="customer-upload.html" class="btn-open-upload">
+                    Mở trang tải lên hồ sơ
+                </a>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- JS Files ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- MOBILE SIDEBAR TOGGLE SCRIPT -->
+    <script>
+        $(document).ready(function () {
+            $('#toggleSidebar, #sidebarOverlay').on('click', function () {
+                $('.dashboard-sidebar').toggleClass('show');
+                $('#sidebarOverlay').toggleClass('show');
+            });
+        });
+    </script>
+</body>
+
+</html>
