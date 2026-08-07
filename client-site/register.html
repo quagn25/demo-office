@@ -69,10 +69,12 @@
                             </div>
                             <div class="de-flex-col">
                                 <div class="menu_side_area">
-                                    <a href="login.html" class="btn-main"
-                                        style="background-color: #1DA599; border-color: #1DA599;"><span>Đăng
-                                            nhập</span></a>
-                                    <span id="menu-btn"></span>
+                    <a
+                      href="login.html"
+                      class="btn-main desktop-action-btn"
+                      style="background-color: #1da599; border-color: #1da599"
+                      ><span>Đăng nhập</span></a
+                    >                <span id="menu-btn"></span>
                                 </div>
                             </div>
                         </div>
@@ -80,9 +82,113 @@
                 </div>
             </div>
         </header>
-        <!-- header close -->
-        <!-- content begin -->
-        <div class="no-bottom no-top" id="content">
+      <!-- header close -->
+
+      <style>
+          .custom-offcanvas {
+              position: fixed;
+              top: 0;
+              right: -300px;
+              width: 300px;
+              height: 100vh;
+              background: #ffffff;
+              z-index: 10000;
+              transition: right 0.3s ease;
+              padding: 30px;
+              box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+              display: flex;
+              flex-direction: column;
+          }
+          .custom-offcanvas.active {
+              right: 0;
+          }
+          .custom-offcanvas ul {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+          }
+          .custom-offcanvas ul li {
+              margin-bottom: 20px;
+          }
+          .custom-offcanvas ul li a {
+              color: #333 !important;
+              font-size: 16px;
+              font-weight: 600;
+              text-decoration: none;
+              display: block;
+          }
+          .close-offcanvas {
+              font-size: 24px;
+              cursor: pointer;
+              color: #333;
+          }
+          .offcanvas-overlay {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(0,0,0,0.5);
+              z-index: 9999;
+              display: none;
+          }
+          .offcanvas-overlay.active {
+              display: block;
+          }
+
+          /* Tablet (<= 991px) */
+          @media (max-width: 991px) {
+              .desktop-action-btn, #mainmenu { display: none !important; }
+              .login-hero-title { font-size: 44px !important; line-height: 1.2 !important; }
+              .login-hero-desc { font-size: 16px !important; }
+          }
+          /* Mobile (<= 767px) */
+          @media (max-width: 767px) {
+              .login-hero-title { font-size: 32px !important; }
+              .login-hero-desc { font-size: 15px !important; }
+          }
+      </style>
+
+      <!-- Custom Mobile Offcanvas Menu -->
+      <div class="offcanvas-overlay" id="offcanvasOverlay"></div>
+      <div class="custom-offcanvas" id="customOffcanvas">
+          <div style="text-align: right; margin-bottom: 30px;">
+              <i class="fa fa-times close-offcanvas" id="closeOffcanvas"></i>
+          </div>
+          <ul>
+              <li><a href="index.html">Trang chủ</a></li>
+              <li><a href="news.html">Tin tức</a></li>
+              <li><a href="contact.html">Liên hệ</a></li>
+          </ul>
+          <div style="margin-top: 20px;">
+              <a href="login.html" class="btn-main" style="background-color: #1da599; border-color: #1da599; padding: 10px 30px; border-radius: 4px; color: white; display: block; text-align: center;">Đăng nhập</a>
+          </div>
+      </div>
+      
+      <script>
+          document.addEventListener("DOMContentLoaded", function() {
+              setTimeout(function() {
+                  if (window.jQuery) {
+                      var $ = window.jQuery;
+                      $('#menu-btn').off('click');
+                      
+                      $('#menu-btn').on('click', function(e) {
+                          e.preventDefault();
+                          $('#customOffcanvas').addClass('active');
+                          $('#offcanvasOverlay').addClass('active');
+                      });
+
+                      $('#closeOffcanvas, #offcanvasOverlay').on('click', function() {
+                          $('#customOffcanvas').removeClass('active');
+                          $('#offcanvasOverlay').removeClass('active');
+                      });
+                  }
+              }, 500);
+          });
+      </script>
+
+      <!-- content begin -->
+      <div class="no-bottom no-top" id="content">
             <div id="top"></div>
 
             <section class="full-height relative no-top no-bottom vertical-center"
@@ -471,6 +577,7 @@
     <script src="js/jquery.smartsticky.min.html"></script>
     <script src="js/designesia.js"></script>
     <script src="js/register.js"></script>
+    <script src="js/floating-contacts.js"></script>
 </body>
 
 </html>
