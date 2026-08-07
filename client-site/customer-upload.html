@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <title>Tải Lên Hồ Sơ - VIOSPACE</title>
+    <link rel="icon" href="images/icon.svg" type="image/svg+xml" sizes="16x16">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- CSS Files ================================================== -->
+    <link id="bootstrap" href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link id="bootstrap-grid" href="css/bootstrap-grid.min.css" rel="stylesheet" type="text/css" />
+    <link id="bootstrap-reboot" href="css/bootstrap-reboot.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/animate.css" rel="stylesheet" type="text/css" />
+    <link id="mdb" href="css/mdb.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css" />
+    <link href="css/coloring.css" rel="stylesheet" type="text/css" />
+    <link href="css/dashboard.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <!-- TOPBAR HEADER -->
+    <header class="topbar-header d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-2">
+            <button class="mobile-sidebar-toggle me-2" id="toggleSidebar" aria-label="Menu Toggle">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a href="index.html">
+                <img src="images/Group1.svg" alt="VIOSPACE Logo" style="height: 34px;">
+            </a>
+            <div class="user-greeting ms-2">
+                <span class="user-greeting-text">Xin chào </span>Nguyễn Văn A
+            </div>
+        </div>
+
+        <div class="topbar-actions">
+            <div class="icon-btn-bell" title="Thông báo">
+                <i class="fa fa-bell-o"></i>
+                <span class="notification-dot"></span>
+            </div>
+            <a href="#" class="btn-change-password">[Đổi mật khẩu]</a>
+            <div class="user-avatar-btn" title="Tài khoản cá nhân">
+                <i class="fa fa-user"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- BACKDROP OVERLAY FOR MOBILE SIDEBAR -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- DASHBOARD CONTAINER -->
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR MENU -->
+        <aside class="dashboard-sidebar">
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="customer-dashboard.html">
+                        <i class="fa fa-th-large"></i>
+                        <span>Tổng quan</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="customer-contracts.html">
+                        <i class="fa fa-file-text-o"></i>
+                        <span>Hợp đồng</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="customer-requests.html">
+                        <i class="fa fa-paper-plane-o"></i>
+                        <span>Yêu cầu</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="customer-upload.html">
+                        <i class="fa fa-cloud-upload"></i>
+                        <span>Tải lên hồ sơ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="customer-billing.html">
+                        <i class="fa fa-credit-card"></i>
+                        <span>Thanh toán</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="dashboard-main-content">
+
+            <!-- PAGE HEADER TITLE (CENTERED 100%) -->
+            <div class="page-header-title mb-4">
+                <h2 style="font-size: 26px; font-weight: 800; color: #0f172a; text-transform: uppercase;">TẢI LÊN HỒ SƠ</h2>
+            </div>
+
+            <!-- DOCUMENT UPLOAD CARD SECTION -->
+            <div class="doc-section-card">
+                <div class="doc-section-title">
+                    Danh sách tài liệu yêu cầu tải lại
+                </div>
+
+                <!-- ITEM 1: CAN CUOC CONG DAN -->
+                <div class="mb-4 pb-4" style="border-bottom: 1px dashed #e2e8f0;">
+                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+                        <div class="doc-item-title mb-0">
+                            1. Căn cước công dân (Mặt trước & Mặt sau)
+                        </div>
+                        <span class="status-tag approved">
+                            <i class="fa fa-check-circle"></i> Trạng thái: Đã duyệt
+                        </span>
+                    </div>
+
+                    <div style="font-size: 14px; font-weight: 600; color: #475569;" class="mb-2">
+                        Tệp đính kèm:
+                    </div>
+                    <div class="attachment-list">
+                        <div class="attachment-chip">
+                            <i class="fa fa-file-image-o text-primary"></i>
+                            <span>cccd_mat_truoc.jpg</span>
+                        </div>
+                        <div class="attachment-chip">
+                            <i class="fa fa-file-image-o text-primary"></i>
+                            <span>cccd_mat_sau.jpg</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ITEM 2: GIAY CHUNG NHAN DANG KY DOANH NGHIEP -->
+                <div>
+                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+                        <div class="doc-item-title mb-0">
+                            2. Giấy chứng nhận Đăng ký doanh nghiệp (Bản Scan)
+                        </div>
+                        <span class="status-tag action-required">
+                            <i class="fa fa-exclamation-circle"></i> Trạng thái: Cần bổ sung
+                        </span>
+                    </div>
+
+                    <div class="admin-remark-box">
+                        <i class="fa fa-info-circle me-1"></i> Ghi chú: "Bản scan bị mất góc, vui lòng chụp lại"
+                    </div>
+
+                    <!-- DRAG & DROP UPLOAD ZONE -->
+                    <div class="drag-drop-zone" id="dropZone" onclick="document.getElementById('fileInput').click();">
+                        <div class="drag-drop-icon">
+                            <i class="fa fa-cloud-upload"></i>
+                        </div>
+                        <div class="drag-drop-text" id="uploadStatusText">
+                            Kéo thả tài liệu vào đây hoặc <span style="color: var(--primary-color); text-decoration: underline;">Bấm để chọn tệp</span>
+                        </div>
+                        <div class="drag-drop-subtext">
+                            Hỗ trợ định dạng: JPG, PNG, PDF (Dung lượng tối đa 10MB)
+                        </div>
+                        <input type="file" id="fileInput" class="d-none" accept=".jpg,.jpeg,.png,.pdf" onchange="handleFileSelect(this)">
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- JS Files ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        $(document).ready(function() {
+            // Sidebar Mobile Toggle
+            $('#toggleSidebar, #sidebarOverlay').on('click', function() {
+                $('.dashboard-sidebar').toggleClass('show');
+                $('#sidebarOverlay').toggleClass('show');
+            });
+
+            // Drag and drop visual events
+            const dropZone = $('#dropZone');
+            
+            dropZone.on('dragover dragenter', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                dropZone.addClass('dragover');
+            });
+
+            dropZone.on('dragleave drop', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                dropZone.removeClass('dragover');
+            });
+
+            dropZone.on('drop', function(e) {
+                const files = e.originalEvent.dataTransfer.files;
+                if (files.length > 0) {
+                    $('#fileInput')[0].files = files;
+                    handleFileSelect($('#fileInput')[0]);
+                }
+            });
+        });
+
+        function handleFileSelect(input) {
+            if (input.files && input.files[0]) {
+                const fileName = input.files[0].name;
+                const fileSize = (input.files[0].size / (1024 * 1024)).toFixed(2);
+                $('#uploadStatusText').html(`
+                    <strong style="color: var(--primary-color);"><i class="fa fa-file-pdf-o me-1"></i> Đã chọn: ${fileName} (${fileSize} MB)</strong><br>
+                    <small class="text-success fw-bold"><i class="fa fa-check me-1"></i> Sẵn sàng tải lên</small>
+                `);
+            }
+        }
+    </script>
+</body>
+
+</html>
